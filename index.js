@@ -40,13 +40,13 @@ const server = app.listen(process.env.PORT, () =>
   console.log(`Server started on ${process.env.PORT}`)
 );
 
-// WebSocket setup
 const io = socket(server, {
   cors: {
-    origin: "https://your-frontend-url.vercel.app"
+    origin: "https://chatting-app-frontend-tan.vercel.app",
     credentials: true,
   },
 });
+
 
 global.onlineUsers = new Map();
 
